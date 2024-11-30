@@ -1,0 +1,50 @@
+read 2
+read 3
+read 4
+ 
+load 2
+sub =20
+jgtz end
+ 
+load 3 
+sub =20
+jgtz end
+ 
+load 4
+sub =100000
+jgtz end
+ 
+ 
+load 4
+mul 3
+sub =1
+store 1
+write 1
+ 
+sub 3
+sub 2
+jzero hop
+jgtz hop
+jump end
+hop:
+add 2
+store 1
+jgtz loop
+
+halt
+ 
+loop:
+load 1
+write 1
+sub 3
+sub 2
+jzero skok
+jgtz skok
+jump end
+skok:
+add 2
+store 1
+jump loop
+ 
+end:
+halt
